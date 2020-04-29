@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node src/controller.js"
+    "start": "node src/controller.js",
+    "dev": "nodemon src/controller.js -e js,hbs"
   },
   "keywords": [],
   "author": "",
