@@ -13,7 +13,7 @@ weatherForm.addEventListener('submit', (e) => {
 
     document.querySelector('#weatherMessage').textContent = 'Loading....'
 
-    fetch('http://localhost:3000/weather?location=' + location).then((response) => {
+    fetch('/weather?location=' + location).then((response) => {
         response.json().then((data) => {
             console.log(data)
             if (data.error) {
@@ -25,7 +25,6 @@ weatherForm.addEventListener('submit', (e) => {
                 document.querySelector('#error').textContent = ''
                 document.querySelector('#weatherMessage').textContent = data.weatherText
                 document.querySelector("#weatherIcon").src = data.imgSrc;
-
             }
         })
     })

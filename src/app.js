@@ -4,6 +4,7 @@ const hbs = require('hbs')
 //const getWeatherForPlaceName = require('../../weather-app/app')
 
 const app = express()
+const port = process.env.PORT || 3000
 
 const publicDir = path.join(__dirname, '../public')
 const viewsPath = path.join(__dirname, '../templates/views')
@@ -20,6 +21,8 @@ app.set('views', viewsPath)
 hbs.registerPartials(partialsPath)
 
 
-app.listen('3000')
+app.listen(port, () => {
+    console.log('server is up and running on port : ' + port)
+})
 
 module.exports = app
