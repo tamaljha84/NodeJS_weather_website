@@ -25,6 +25,7 @@ weatherForm.addEventListener('submit', (e) => {
                 document.querySelector('#error').textContent = ''
                 document.querySelector('#weatherMessage').textContent = data.weatherText
                 document.querySelector("#weatherIcon").src = data.imgSrc;
+                // Changes
             }
         })
     })
